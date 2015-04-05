@@ -43,8 +43,7 @@ install:
       echo "usernames['wikipedia']['en'] = '$PYWIKIBOT2_USERNAME'" >> ~/.pywikibot/user-config.py ;
       echo "usernames['wikipedia']['test'] = '$PYWIKIBOT2_USERNAME'" >> ~/.pywikibot/user-config.py ;
       echo "usernames['wikidata']['test'] = '$PYWIKIBOT2_USERNAME'" >> ~/.pywikibot/user-config.py ;
-      echo "usernames['wikia']['en'] = '$PYWIKIBOT2_USERNAME'" >> ~/.pywikibot/user-config.py ;
-      echo "usernames['wikia']['ru'] = '$PYWIKIBOT2_USERNAME'" >> ~/.pywikibot/user-config.py ;
+      echo "usernames['wikia']['wikia'] = '$PYWIKIBOT2_USERNAME'" >> ~/.pywikibot/user-config.py ;
       echo "usernames['commons']['commons'] = '$PYWIKIBOT2_USERNAME'" >> ~/.pywikibot/user-config.py ;
       echo "('$PYWIKIBOT2_USERNAME', '$USER_PASSWORD')" > ~/.pywikibot/passwordfile ;
     fi
@@ -81,8 +80,7 @@ env:
     - LANGUAGE=ar FAMILY=wikipedia PYSETUP_TEST_EXTRAS=1
     - LANGUAGE=test FAMILY=wikidata SITE_ONLY=1
     - LANGUAGE=fr FAMILY=wiktionary SITE_ONLY=1 EXTERNALS_HTTPLIB2=1
-    - LANGUAGE=en FAMILY=wikia
-    - LANGUAGE=ru FAMILY=wikia
+    - LANGUAGE=wikia FAMILY=wikia
 
 notifications:
   email:
